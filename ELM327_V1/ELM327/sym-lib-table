@@ -1,0 +1,6 @@
+(sym_lib_table
+  (lib (name MPciE)(type Legacy)(uri ${KIPRJMOD}/kicad-mini-pci-express/mpcie.lib)(options "")(descr ""))
+  (lib (name SMF05C)(type Legacy)(uri ${KIPRJMOD}/SMF05C/SMF05C.lib)(options "")(descr ""))
+  (lib (name TPSM84209RKHT)(type Legacy)(uri ${KIPRJMOD}/TPSM84209RKHT/eec.lib)(options "")(descr ""))
+  (lib (name STLQ50C18R)(type Legacy)(uri ${KIPRJMOD}/STLQ50C18R/eec.lib)(options "")(descr ""))
+)

@@ -1,0 +1,555 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Linear:L7805 U?
+U 1 1 61DEA56B
+P 2150 1150
+AR Path="/61B559C8/61DEA56B" Ref="U?"  Part="1" 
+AR Path="/61DE7DB3/61DEA56B" Ref="U?"  Part="1" 
+F 0 "U?" H 2150 1392 50  0000 C CNN
+F 1 "L7805" H 2150 1301 50  0000 C CNN
+F 2 "" H 2175 1000 50  0001 L CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 2150 1100 50  0001 C CNN
+	1    2150 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 1300 2600 1150
+Wire Wire Line
+	2600 1150 2450 1150
+Wire Wire Line
+	1850 1150 1700 1150
+Wire Wire Line
+	1700 1150 1700 1300
+$Comp
+L Device:LED D?
+U 1 1 61DEA575
+P 3025 1450
+AR Path="/61B559C8/61DEA575" Ref="D?"  Part="1" 
+AR Path="/61DE7DB3/61DEA575" Ref="D?"  Part="1" 
+F 0 "D?" V 3064 1332 50  0000 R CNN
+F 1 "LED" V 2973 1332 50  0000 R CNN
+F 2 "" H 3025 1450 50  0001 C CNN
+F 3 "~" H 3025 1450 50  0001 C CNN
+	1    3025 1450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3025 1300 3025 1150
+Wire Wire Line
+	3025 1150 2600 1150
+Connection ~ 2600 1150
+$Comp
+L Device:R R?
+U 1 1 61DEA57E
+P 3025 1875
+AR Path="/61B559C8/61DEA57E" Ref="R?"  Part="1" 
+AR Path="/61DE7DB3/61DEA57E" Ref="R?"  Part="1" 
+F 0 "R?" H 3095 1921 50  0000 L CNN
+F 1 "470" H 3095 1830 50  0000 L CNN
+F 2 "" V 2955 1875 50  0001 C CNN
+F 3 "~" H 3025 1875 50  0001 C CNN
+	1    3025 1875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3025 1725 3025 1600
+Wire Wire Line
+	3025 2025 3025 2125
+Wire Wire Line
+	1700 1725 1700 1600
+Wire Wire Line
+	2600 1600 2600 1725
+$Comp
+L power:VBUS #PWR?
+U 1 1 61DEA588
+P 1050 1050
+AR Path="/61B559C8/61DEA588" Ref="#PWR?"  Part="1" 
+AR Path="/61DE7DB3/61DEA588" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1050 900 50  0001 C CNN
+F 1 "VBUS" H 1065 1223 50  0000 C CNN
+F 2 "" H 1050 1050 50  0001 C CNN
+F 3 "" H 1050 1050 50  0001 C CNN
+	1    1050 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Simulation_SPICE:DIODE D?
+U 1 1 61DEA590
+P 1325 1150
+AR Path="/61B559C8/61DEA590" Ref="D?"  Part="1" 
+AR Path="/61DE7DB3/61DEA590" Ref="D?"  Part="1" 
+F 0 "D?" H 1325 1367 50  0000 C CNN
+F 1 "1N4001" H 1325 1276 50  0000 C CNN
+F 2 "" H 1325 1150 50  0001 C CNN
+F 3 "~" H 1325 1150 50  0001 C CNN
+F 4 "Y" H 1325 1150 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "D" H 1325 1150 50  0001 L CNN "Spice_Primitive"
+	1    1325 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1475 1150 1700 1150
+Connection ~ 1700 1150
+Wire Wire Line
+	1050 1050 1050 1150
+Wire Wire Line
+	1050 1150 1175 1150
+Text Notes 1875 875  0    50   ~ 0
+Battery to 5V
+$Comp
+L power:+5V #PWR?
+U 1 1 61DEA59B
+P 3025 1050
+AR Path="/61B559C8/61DEA59B" Ref="#PWR?"  Part="1" 
+AR Path="/61DE7DB3/61DEA59B" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3025 900 50  0001 C CNN
+F 1 "+5V" H 3040 1223 50  0000 C CNN
+F 2 "" H 3025 1050 50  0001 C CNN
+F 3 "" H 3025 1050 50  0001 C CNN
+	1    3025 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3025 1050 3025 1150
+Connection ~ 3025 1150
+Wire Wire Line
+	2150 1725 2150 1450
+$Comp
+L power:+12V #PWR?
+U 1 1 61DEA5A4
+P 1700 1025
+AR Path="/61B559C8/61DEA5A4" Ref="#PWR?"  Part="1" 
+AR Path="/61DE7DB3/61DEA5A4" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1700 875 50  0001 C CNN
+F 1 "+12V" H 1715 1198 50  0000 C CNN
+F 2 "" H 1700 1025 50  0001 C CNN
+F 3 "" H 1700 1025 50  0001 C CNN
+	1    1700 1025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 1025 1700 1150
+$Comp
+L power:GND #PWR?
+U 1 1 61DEA5AB
+P 1700 1725
+AR Path="/61B559C8/61DEA5AB" Ref="#PWR?"  Part="1" 
+AR Path="/61DE7DB3/61DEA5AB" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1700 1475 50  0001 C CNN
+F 1 "GND" H 1705 1552 50  0000 C CNN
+F 2 "" H 1700 1725 50  0001 C CNN
+F 3 "" H 1700 1725 50  0001 C CNN
+	1    1700 1725
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61DEA5B1
+P 2150 1725
+AR Path="/61B559C8/61DEA5B1" Ref="#PWR?"  Part="1" 
+AR Path="/61DE7DB3/61DEA5B1" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 2150 1475 50  0001 C CNN
+F 1 "GND" H 2155 1552 50  0000 C CNN
+F 2 "" H 2150 1725 50  0001 C CNN
+F 3 "" H 2150 1725 50  0001 C CNN
+	1    2150 1725
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61DEA5B7
+P 2600 1725
+AR Path="/61B559C8/61DEA5B7" Ref="#PWR?"  Part="1" 
+AR Path="/61DE7DB3/61DEA5B7" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 2600 1475 50  0001 C CNN
+F 1 "GND" H 2605 1552 50  0000 C CNN
+F 2 "" H 2600 1725 50  0001 C CNN
+F 3 "" H 2600 1725 50  0001 C CNN
+	1    2600 1725
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61DEA5BD
+P 3025 2125
+AR Path="/61B559C8/61DEA5BD" Ref="#PWR?"  Part="1" 
+AR Path="/61DE7DB3/61DEA5BD" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3025 1875 50  0001 C CNN
+F 1 "GND" H 3030 1952 50  0000 C CNN
+F 2 "" H 3025 2125 50  0001 C CNN
+F 3 "" H 3025 2125 50  0001 C CNN
+	1    3025 2125
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 61DEA5C3
+P 1700 1450
+AR Path="/61B559C8/61DEA5C3" Ref="C?"  Part="1" 
+AR Path="/61DE7DB3/61DEA5C3" Ref="C?"  Part="1" 
+F 0 "C?" H 1818 1496 50  0000 L CNN
+F 1 "0.1uF" H 1818 1405 50  0000 L CNN
+F 2 "" H 1738 1300 50  0001 C CNN
+F 3 "~" H 1700 1450 50  0001 C CNN
+	1    1700 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 61DEA5C9
+P 2600 1450
+AR Path="/61B559C8/61DEA5C9" Ref="C?"  Part="1" 
+AR Path="/61DE7DB3/61DEA5C9" Ref="C?"  Part="1" 
+F 0 "C?" H 2718 1496 50  0000 L CNN
+F 1 "0.1uF" H 2718 1405 50  0000 L CNN
+F 2 "" H 2638 1300 50  0001 C CNN
+F 3 "~" H 2600 1450 50  0001 C CNN
+	1    2600 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L TPSM84209RKHT:TPSM84209RKHT U?
+U 1 1 61DF9973
+P 1450 2875
+F 0 "U?" H 1950 3140 50  0000 C CNN
+F 1 "TPSM84209RKHT" H 1950 3049 50  0000 C CNN
+F 2 "Texas_Instruments-RKH0009A-0-0-*" H 1450 3275 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tpsm84209.pdf" H 1450 3375 50  0001 L CNN
+F 4 "+85°C" H 1450 3475 50  0001 L CNN "ambient temperature range high"
+F 5 "-40°C" H 1450 3575 50  0001 L CNN "ambient temperature range low"
+F 6 "No" H 1450 3675 50  0001 L CNN "automotive"
+F 7 "IC" H 1450 3775 50  0001 L CNN "category"
+F 8 "Integrated Circuits (ICs)" H 1450 3875 50  0001 L CNN "device class L1"
+F 9 "Power Management ICs" H 1450 3975 50  0001 L CNN "device class L2"
+F 10 "Voltage Regulators - Switching" H 1450 4075 50  0001 L CNN "device class L3"
+F 11 "DC DC CONVERTER 1.2-6V 15W" H 1450 4175 50  0001 L CNN "digikey description"
+F 12 "296-49513-1-ND" H 1450 4275 50  0001 L CNN "digikey part number"
+F 13 "2.1mm" H 1450 4375 50  0001 L CNN "height"
+F 14 "Yes" H 1450 4475 50  0001 L CNN "lead free"
+F 15 "7a12823df0793c5c" H 1450 4575 50  0001 L CNN "library id"
+F 16 "Texas Instruments" H 1450 4675 50  0001 L CNN "manufacturer"
+F 17 "+125°C" H 1450 4775 50  0001 L CNN "max junction temp"
+F 18 "28V" H 1450 4875 50  0001 L CNN "max supply voltage"
+F 19 "4.5V" H 1450 4975 50  0001 L CNN "min supply voltage"
+F 20 "4.5-V to 28-V input, 1.2-V to 6-V output, 2.5-A power module 9-QFN-FCMOD -40 to 85" H 1450 5075 50  0001 L CNN "mouser description"
+F 21 "595-TPSM84209RKHT" H 1450 5175 50  0001 L CNN "mouser part number"
+F 22 "1" H 1450 5275 50  0001 L CNN "number of outputs"
+F 23 "2.5A" H 1450 5375 50  0001 L CNN "output current"
+F 24 "AdjustableProgrammable" H 1450 5475 50  0001 L CNN "output type"
+F 25 "6V" H 1450 5575 50  0001 L CNN "output voltage"
+F 26 "QFN9" H 1450 5675 50  0001 L CNN "package"
+F 27 "Yes" H 1450 5775 50  0001 L CNN "rohs"
+F 28 "0mm" H 1450 5875 50  0001 L CNN "standoff height"
+F 29 "750kHz" H 1450 5975 50  0001 L CNN "switching frequency"
+F 30 "Buck" H 1450 6075 50  0001 L CNN "switching topology"
+F 31 "+85°C" H 1450 6175 50  0001 L CNN "temperature range high"
+F 32 "-40°C" H 1450 6275 50  0001 L CNN "temperature range low"
+	1    1450 2875
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61DF9979
+P 2450 3650
+F 0 "#PWR?" H 2450 3400 50  0001 C CNN
+F 1 "GND" H 2455 3477 50  0000 C CNN
+F 2 "" H 2450 3650 50  0001 C CNN
+F 3 "" H 2450 3650 50  0001 C CNN
+	1    2450 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 3650 2450 3575
+Wire Wire Line
+	2450 3575 2350 3575
+NoConn ~ 1550 3475
+NoConn ~ 1550 3575
+$Comp
+L Device:R R?
+U 1 1 61DF9983
+P 2800 2975
+F 0 "R?" H 2870 3021 50  0000 L CNN
+F 1 "10K" H 2870 2930 50  0000 L CNN
+F 2 "" V 2730 2975 50  0001 C CNN
+F 3 "~" H 2800 2975 50  0001 C CNN
+	1    2800 2975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 2825 2450 2825
+Wire Wire Line
+	2450 2825 2450 2875
+Wire Wire Line
+	2450 2875 2350 2875
+Wire Wire Line
+	2800 3125 2450 3125
+Wire Wire Line
+	2450 3125 2450 3075
+Wire Wire Line
+	2450 3075 2350 3075
+$Comp
+L Device:R R?
+U 1 1 61DF998F
+P 2800 3275
+F 0 "R?" H 2870 3321 50  0000 L CNN
+F 1 "2.21K" H 2870 3230 50  0000 L CNN
+F 2 "" V 2730 3275 50  0001 C CNN
+F 3 "~" H 2800 3275 50  0001 C CNN
+	1    2800 3275
+	1    0    0    -1  
+$EndComp
+Connection ~ 2800 3125
+$Comp
+L power:GND #PWR?
+U 1 1 61DF9996
+P 2800 3425
+F 0 "#PWR?" H 2800 3175 50  0001 C CNN
+F 1 "GND" H 2805 3252 50  0000 C CNN
+F 2 "" H 2800 3425 50  0001 C CNN
+F 3 "" H 2800 3425 50  0001 C CNN
+	1    2800 3425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 2825 3100 2825
+Connection ~ 2800 2825
+$Comp
+L Device:C C?
+U 1 1 61DF999E
+P 3100 2975
+F 0 "C?" H 3215 3021 50  0000 L CNN
+F 1 "330pF" H 3215 2930 50  0000 L CNN
+F 2 "" H 3138 2825 50  0001 C CNN
+F 3 "~" H 3100 2975 50  0001 C CNN
+	1    3100 2975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 2825 3350 2825
+Wire Wire Line
+	3350 2825 3350 2775
+Connection ~ 3100 2825
+Wire Wire Line
+	2800 3125 3100 3125
+$Comp
+L Device:R R?
+U 1 1 61DF99A8
+P 1300 3025
+F 0 "R?" H 1370 3071 50  0000 L CNN
+F 1 "68.1K" H 1370 2980 50  0000 L CNN
+F 2 "" V 1230 3025 50  0001 C CNN
+F 3 "~" H 1300 3025 50  0001 C CNN
+	1    1300 3025
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61DF99AE
+P 1300 3325
+F 0 "R?" H 1370 3371 50  0000 L CNN
+F 1 "9.53K" H 1370 3280 50  0000 L CNN
+F 2 "" V 1230 3325 50  0001 C CNN
+F 3 "~" H 1300 3325 50  0001 C CNN
+	1    1300 3325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 2875 1300 2875
+$Comp
+L power:GND #PWR?
+U 1 1 61DF99B5
+P 1300 3475
+F 0 "#PWR?" H 1300 3225 50  0001 C CNN
+F 1 "GND" H 1305 3302 50  0000 C CNN
+F 2 "" H 1300 3475 50  0001 C CNN
+F 3 "" H 1300 3475 50  0001 C CNN
+	1    1300 3475
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2350 3275
+NoConn ~ 2350 3375
+Text Notes 2050 2650 0    50   ~ 0
+Power 2.5 AMP PCIE SIM7600
+$Comp
+L power:+3V3 #PWR?
+U 1 1 61DF99BE
+P 3350 2775
+F 0 "#PWR?" H 3350 2625 50  0001 C CNN
+F 1 "+3V3" H 3365 2948 50  0000 C CNN
+F 2 "" H 3350 2775 50  0001 C CNN
+F 3 "" H 3350 2775 50  0001 C CNN
+	1    3350 2775
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VBUS #PWR?
+U 1 1 61DF99C4
+P 975 2775
+AR Path="/61B559C8/61DF99C4" Ref="#PWR?"  Part="1" 
+AR Path="/61BA48F5/61DF99C4" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 975 2625 50  0001 C CNN
+F 1 "VBUS" H 990 2948 50  0000 C CNN
+F 2 "" H 975 2775 50  0001 C CNN
+F 3 "" H 975 2775 50  0001 C CNN
+	1    975  2775
+	1    0    0    -1  
+$EndComp
+$Comp
+L Simulation_SPICE:DIODE D?
+U 1 1 61DF99CC
+P 1125 2875
+AR Path="/61B559C8/61DF99CC" Ref="D?"  Part="1" 
+AR Path="/61BA48F5/61DF99CC" Ref="D?"  Part="1" 
+F 0 "D?" H 1125 3092 50  0000 C CNN
+F 1 "1N4001" H 1125 3001 50  0000 C CNN
+F 2 "" H 1125 2875 50  0001 C CNN
+F 3 "~" H 1125 2875 50  0001 C CNN
+F 4 "Y" H 1125 2875 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "D" H 1125 2875 50  0001 L CNN "Spice_Primitive"
+	1    1125 2875
+	1    0    0    -1  
+$EndComp
+Connection ~ 1300 3175
+Wire Wire Line
+	1300 3175 1550 3175
+Wire Wire Line
+	975  2775 975  2875
+Wire Wire Line
+	1275 2875 1300 2875
+Connection ~ 1300 2875
+$Comp
+L STLQ50C18R:STLQ50C18R U?
+U 1 1 61E042BB
+P 4275 1200
+F 0 "U?" H 4775 1465 50  0000 C CNN
+F 1 "STLQ50C18R" H 4775 1374 50  0000 C CNN
+F 2 "STMicroelectronics-STLQ50C18R-*" H 4275 1600 50  0001 L CNN
+F 3 "http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00151464.pdf" H 4275 1700 50  0001 L CNN
+F 4 "Manufacturer URL" H 4275 1800 50  0001 L CNN "Component Link 1 Description"
+F 5 "http://www.st.com" H 4275 1900 50  0001 L CNN "Component Link 1 URL"
+F 6 "1/11/2007" H 4275 2000 50  0001 L CNN "Datasheet Version"
+F 7 "5-Pin SOT-323 Package, 2 x 1.3 mm Body, 0.65 mm Pitch, 2.1 mm Lead Span" H 4275 2100 50  0001 L CNN "Package Description"
+F 8 "1/01/2006" H 4275 2200 50  0001 L CNN "Package Version"
+F 9 "IC" H 4275 2300 50  0001 L CNN "category"
+F 10 "1497714" H 4275 2400 50  0001 L CNN "ciiva ids"
+F 11 "29e5c107ad86f058" H 4275 2500 50  0001 L CNN "library id"
+F 12 "STMicroelectronics" H 4275 2600 50  0001 L CNN "manufacturer"
+F 13 "SOT323-5L" H 4275 2700 50  0001 L CNN "package"
+F 14 "1329864111" H 4275 2800 50  0001 L CNN "release date"
+F 15 "AB59921E-9463-4246-9137-08EA04A96451" H 4275 2900 50  0001 L CNN "vault revision"
+F 16 "yes" H 4275 3000 50  0001 L CNN "imported"
+	1    4275 1200
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4375 1300
+NoConn ~ 5175 1300
+$Comp
+L Device:C C?
+U 1 1 61E0777C
+P 5375 1475
+F 0 "C?" H 5490 1521 50  0000 L CNN
+F 1 "1uF" H 5490 1430 50  0000 L CNN
+F 2 "" H 5413 1325 50  0001 C CNN
+F 3 "~" H 5375 1475 50  0001 C CNN
+	1    5375 1475
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 61E07E74
+P 4175 1475
+F 0 "C?" H 4290 1521 50  0000 L CNN
+F 1 "1uF" H 4290 1430 50  0000 L CNN
+F 2 "" H 4213 1325 50  0001 C CNN
+F 3 "~" H 4175 1475 50  0001 C CNN
+	1    4175 1475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4375 1200 4175 1200
+Wire Wire Line
+	5175 1200 5375 1200
+Wire Wire Line
+	5375 1200 5375 1325
+Wire Wire Line
+	5375 1625 4775 1625
+Wire Wire Line
+	4775 1625 4775 1700
+Wire Wire Line
+	4775 1625 4775 1600
+Connection ~ 4775 1625
+Wire Wire Line
+	4175 1625 4775 1625
+Wire Wire Line
+	4175 1325 4175 1200
+$Comp
+L power:GND #PWR?
+U 1 1 61E0B90E
+P 4775 1700
+F 0 "#PWR?" H 4775 1450 50  0001 C CNN
+F 1 "GND" H 4780 1527 50  0000 C CNN
+F 2 "" H 4775 1700 50  0001 C CNN
+F 3 "" H 4775 1700 50  0001 C CNN
+	1    4775 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+1V8 #PWR?
+U 1 1 61E0CAE8
+P 5375 1150
+F 0 "#PWR?" H 5375 1000 50  0001 C CNN
+F 1 "+1V8" H 5390 1323 50  0000 C CNN
+F 2 "" H 5375 1150 50  0001 C CNN
+F 3 "" H 5375 1150 50  0001 C CNN
+	1    5375 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5375 1150 5375 1200
+Connection ~ 5375 1200
+$Comp
+L power:+12V #PWR?
+U 1 1 61E0F07A
+P 4175 1175
+AR Path="/61B559C8/61E0F07A" Ref="#PWR?"  Part="1" 
+AR Path="/61DE7DB3/61E0F07A" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4175 1025 50  0001 C CNN
+F 1 "+12V" H 4190 1348 50  0000 C CNN
+F 2 "" H 4175 1175 50  0001 C CNN
+F 3 "" H 4175 1175 50  0001 C CNN
+	1    4175 1175
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4175 1175 4175 1200
+Connection ~ 4175 1200
+$Comp
+L power:+12V #PWR?
+U 1 1 61E12825
+P 1300 2775
+AR Path="/61B559C8/61E12825" Ref="#PWR?"  Part="1" 
+AR Path="/61DE7DB3/61E12825" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1300 2625 50  0001 C CNN
+F 1 "+12V" H 1315 2948 50  0000 C CNN
+F 2 "" H 1300 2775 50  0001 C CNN
+F 3 "" H 1300 2775 50  0001 C CNN
+	1    1300 2775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 2775 1300 2875
+$EndSCHEMATC

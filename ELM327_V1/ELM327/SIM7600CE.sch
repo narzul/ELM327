@@ -1,0 +1,640 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_02x26_Odd_Even J?
+U 1 1 61BB044F
+P 4050 3450
+F 0 "J?" H 4100 4867 50  0000 C CNN
+F 1 "Conn_02x26_Odd_Even" H 4100 4776 50  0000 C CNN
+F 2 "" H 4050 3450 50  0001 C CNN
+F 3 "~" H 4050 3450 50  0001 C CNN
+	1    4050 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61BB2FF0
+P 7050 1275
+F 0 "#PWR?" H 7050 1025 50  0001 C CNN
+F 1 "GND" H 7055 1102 50  0000 C CNN
+F 2 "" H 7050 1275 50  0001 C CNN
+F 3 "" H 7050 1275 50  0001 C CNN
+	1    7050 1275
+	1    0    0    -1  
+$EndComp
+Text Label 7050 1275 1    50   ~ 0
+mPCIe_GND
+Text Label 4350 4650 0    50   ~ 0
+mPCIe_GND
+Text Label 4350 4150 0    50   ~ 0
+mPCIe_GND
+Text Label 4350 3850 0    50   ~ 0
+mPCIe_GND
+Text Label 4350 3450 0    50   ~ 0
+mPCIe_GND
+Text Label 4350 3050 0    50   ~ 0
+mPCIe_GND
+Text Label 4350 2350 0    50   ~ 0
+mPCIe_GND
+Text Label 3850 2650 2    50   ~ 0
+mPCIe_GND
+Text Label 3850 2950 2    50   ~ 0
+mPCIe_GND
+Text Label 3850 3250 2    50   ~ 0
+mPCIe_GND
+Text Label 3850 3550 2    50   ~ 0
+mPCIe_GND
+Text Label 3850 3650 2    50   ~ 0
+mPCIe_GND
+Text Label 3850 3950 2    50   ~ 0
+mPCIe_GND
+Text Label 3850 4050 2    50   ~ 0
+mPCIe_GND
+Text Label 3850 4350 2    50   ~ 0
+mPCIe_GND
+NoConn ~ 3850 2350
+NoConn ~ 3850 2450
+NoConn ~ 3850 2550
+NoConn ~ 3850 3150
+NoConn ~ 3850 3850
+NoConn ~ 4350 4350
+NoConn ~ 4350 4450
+NoConn ~ 4350 4550
+NoConn ~ 4350 3550
+NoConn ~ 4350 2450
+Text Label 4350 2550 0    50   ~ 0
+USIM_VDD
+Text Label 4350 2650 0    50   ~ 0
+USIM_DATA
+Text Label 4350 2750 0    50   ~ 0
+USIM_CLK
+Text Label 4350 2850 0    50   ~ 0
+USIM_RST
+Text Label 4350 3250 0    50   ~ 0
+PERST#
+Text Label 4350 3650 0    50   ~ 0
+I2C_SCL
+Text Label 4350 3750 0    50   ~ 0
+I2C_SDA
+Text Label 3850 2850 2    50   ~ 0
+UART_TX
+Text Label 3850 2750 2    50   ~ 0
+UART_RX
+$Comp
+L Connector:SIM_Card J?
+U 1 1 61BFFDAC
+P 2000 1200
+F 0 "J?" V 2089 920 50  0000 R CNN
+F 1 "SIM_Card" V 1998 920 50  0000 R CNN
+F 2 "" H 2000 1550 50  0001 C CNN
+F 3 " ~" H 1950 1200 50  0001 C CNN
+	1    2000 1200
+	0    -1   -1   0   
+$EndComp
+Text Label 1700 2775 3    50   ~ 0
+USIM_VDD
+Text Label 1900 2775 3    50   ~ 0
+USIM_CLK
+Text Label 2200 2775 3    50   ~ 0
+USIM_DATA
+$Comp
+L power:GND #PWR?
+U 1 1 61C0383B
+P 2000 1700
+F 0 "#PWR?" H 2000 1450 50  0001 C CNN
+F 1 "GND" H 2005 1527 50  0000 C CNN
+F 2 "" H 2000 1700 50  0001 C CNN
+F 3 "" H 2000 1700 50  0001 C CNN
+	1    2000 1700
+	1    0    0    -1  
+$EndComp
+Text Label 1800 2775 3    50   ~ 0
+USIM_RST
+NoConn ~ 2100 1700
+$Comp
+L SMF05C:SMF05C D?
+U 1 1 61C058AC
+P 1025 2150
+F 0 "D?" V 453 2100 50  0000 C CNN
+F 1 "SMF05C" V 544 2100 50  0000 C CNN
+F 2 "SC70-6" H 1025 2150 50  0001 L BNN
+F 3 "" H 1025 2150 50  0001 L BNN
+	1    1025 2150
+	0    1    1    0   
+$EndComp
+NoConn ~ 4350 2950
+Wire Wire Line
+	1125 1850 1700 1850
+Wire Wire Line
+	1700 1850 1700 1725
+Wire Wire Line
+	1125 2250 1900 2250
+Wire Wire Line
+	1125 2650 2200 2650
+NoConn ~ 1125 2450
+Wire Wire Line
+	1700 1850 1700 2775
+Connection ~ 1700 1850
+Wire Wire Line
+	1800 2775 1800 2050
+Wire Wire Line
+	1900 2775 1900 2250
+Wire Wire Line
+	2200 2775 2200 2650
+$Comp
+L Device:C C?
+U 1 1 61C182B3
+P 1000 1400
+F 0 "C?" V 748 1400 50  0000 C CNN
+F 1 "100nF" V 839 1400 50  0000 C CNN
+F 2 "" H 1038 1250 50  0001 C CNN
+F 3 "~" H 1000 1400 50  0001 C CNN
+	1    1000 1400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1150 1400 1150 1725
+Wire Wire Line
+	1150 1725 1700 1725
+Connection ~ 1700 1725
+Wire Wire Line
+	1700 1725 1700 1700
+$Comp
+L power:GND #PWR?
+U 1 1 61C1B734
+P 725 2325
+F 0 "#PWR?" H 725 2075 50  0001 C CNN
+F 1 "GND" H 730 2152 50  0000 C CNN
+F 2 "" H 725 2325 50  0001 C CNN
+F 3 "" H 725 2325 50  0001 C CNN
+	1    725  2325
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61C1BD05
+P 725 1500
+F 0 "#PWR?" H 725 1250 50  0001 C CNN
+F 1 "GND" H 730 1327 50  0000 C CNN
+F 2 "" H 725 1500 50  0001 C CNN
+F 3 "" H 725 1500 50  0001 C CNN
+	1    725  1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	850  1400 725  1400
+Wire Wire Line
+	725  1400 725  1500
+Wire Wire Line
+	725  2325 725  2250
+Wire Wire Line
+	725  2250 825  2250
+Wire Wire Line
+	1125 2050 1800 2050
+Text Notes 4400 3950 0    50   ~ 0
+USB_DM
+Text Notes 4400 4050 0    50   ~ 0
+USB_DP
+NoConn ~ 4350 3950
+NoConn ~ 4350 4050
+Text Notes 3825 4450 2    50   ~ 0
+PCM_CLK
+Text Notes 3800 4550 2    50   ~ 0
+PCM_DOUT
+Text Notes 3800 4650 2    50   ~ 0
+PCM_DIN
+Text Notes 3800 4775 2    50   ~ 0
+PCM_SYNC
+NoConn ~ 3850 4450
+NoConn ~ 3850 4550
+NoConn ~ 3850 4650
+NoConn ~ 3850 4750
+Text Label 6825 950  3    50   ~ 0
+mPCIe_3.3V
+Text Notes 4400 3150 0    50   ~ 0
+W_DISABLE#
+NoConn ~ 4350 3150
+Text Label 4350 2250 0    50   ~ 0
+mPCIe_3.3V
+Text Label 4350 3350 0    50   ~ 0
+mPCIe_3.3V
+Text Label 3850 4150 2    50   ~ 0
+mPCIe_3.3V
+Text Label 3850 4250 2    50   ~ 0
+mPCIe_3.3V
+Text Label 4350 4750 0    50   ~ 0
+mPCIe_3.3V
+Text Notes 3825 2250 2    50   ~ 0
+WAKE#
+NoConn ~ 3850 2250
+$Comp
+L Device:R R?
+U 1 1 61C4A8E9
+P 3900 1000
+F 0 "R?" V 3693 1000 50  0000 C CNN
+F 1 "47K" V 3784 1000 50  0000 C CNN
+F 2 "" V 3830 1000 50  0001 C CNN
+F 3 "~" H 3900 1000 50  0001 C CNN
+	1    3900 1000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61C4B6AE
+P 4250 1325
+F 0 "R?" V 4043 1325 50  0000 C CNN
+F 1 "47K" V 4134 1325 50  0000 C CNN
+F 2 "" V 4180 1325 50  0001 C CNN
+F 3 "~" H 4250 1325 50  0001 C CNN
+	1    4250 1325
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Q_NPN_BCE Q?
+U 1 1 61C4C51F
+P 4500 1000
+F 0 "Q?" H 4691 1046 50  0000 L CNN
+F 1 "Q_NPN_BCE" H 4691 955 50  0000 L CNN
+F 2 "" H 4700 1100 50  0001 C CNN
+F 3 "~" H 4500 1000 50  0001 C CNN
+	1    4500 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61C4CDB2
+P 4600 1450
+F 0 "#PWR?" H 4600 1200 50  0001 C CNN
+F 1 "GND" H 4605 1277 50  0000 C CNN
+F 2 "" H 4600 1450 50  0001 C CNN
+F 3 "" H 4600 1450 50  0001 C CNN
+	1    4600 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 61C4D17E
+P 5250 1000
+F 0 "C?" H 5365 1046 50  0000 L CNN
+F 1 "100nF" H 5365 955 50  0000 L CNN
+F 2 "" H 5288 850 50  0001 C CNN
+F 3 "~" H 5250 1000 50  0001 C CNN
+	1    5250 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 61C4ED16
+P 5675 1000
+F 0 "D?" V 5629 1080 50  0000 L CNN
+F 1 "D_TVS" V 5720 1080 50  0000 L CNN
+F 2 "" H 5675 1000 50  0001 C CNN
+F 3 "~" H 5675 1000 50  0001 C CNN
+	1    5675 1000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4600 1200 4600 1325
+Wire Wire Line
+	4300 1000 4100 1000
+Wire Wire Line
+	4100 1325 4100 1000
+Connection ~ 4100 1000
+Wire Wire Line
+	4100 1000 4050 1000
+Wire Wire Line
+	4400 1325 4600 1325
+Connection ~ 4600 1325
+Wire Wire Line
+	4600 1325 4600 1450
+Wire Wire Line
+	4600 800  5250 800 
+Wire Wire Line
+	5675 800  5675 850 
+Wire Wire Line
+	5250 850  5250 800 
+Connection ~ 5250 800 
+Wire Wire Line
+	5250 800  5675 800 
+$Comp
+L power:GND #PWR?
+U 1 1 61C532D1
+P 5250 1450
+F 0 "#PWR?" H 5250 1200 50  0001 C CNN
+F 1 "GND" H 5255 1277 50  0000 C CNN
+F 2 "" H 5250 1450 50  0001 C CNN
+F 3 "" H 5250 1450 50  0001 C CNN
+	1    5250 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61C53B6B
+P 5675 1450
+F 0 "#PWR?" H 5675 1200 50  0001 C CNN
+F 1 "GND" H 5680 1277 50  0000 C CNN
+F 2 "" H 5675 1450 50  0001 C CNN
+F 3 "" H 5675 1450 50  0001 C CNN
+	1    5675 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5675 1450 5675 1150
+Wire Wire Line
+	5250 1150 5250 1450
+Text Label 5750 800  0    50   ~ 0
+PERST#
+Wire Wire Line
+	5750 800  5675 800 
+Connection ~ 5675 800 
+Text HLabel 3675 1000 0    50   Input ~ 0
+Reset_PIN_ESP32
+Wire Wire Line
+	3675 1000 3750 1000
+Wire Notes Line
+	475  475  475  3275
+Wire Notes Line
+	475  3275 2825 3275
+Wire Notes Line
+	2825 475  2825 3275
+Text Notes 750  700  0    50   ~ 0
+SIM CARD SLOT
+Wire Notes Line
+	6050 1800 6050 475 
+Text Notes 4075 625  0    50   ~ 0
+SIM7600 RESET PIN
+$Comp
+L Device:R R?
+U 1 1 61C9AF34
+P 6225 875
+F 0 "R?" H 6295 921 50  0000 L CNN
+F 1 "120" H 6295 830 50  0000 L CNN
+F 2 "" V 6155 875 50  0001 C CNN
+F 3 "~" H 6225 875 50  0001 C CNN
+	1    6225 875 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 61C9B866
+P 6225 1175
+F 0 "D?" V 6264 1057 50  0000 R CNN
+F 1 "LED" V 6173 1057 50  0000 R CNN
+F 2 "" H 6225 1175 50  0001 C CNN
+F 3 "~" H 6225 1175 50  0001 C CNN
+	1    6225 1175
+	0    -1   -1   0   
+$EndComp
+Text Label 4350 4250 0    50   ~ 0
+LED_WWAN#
+Text Label 6225 1325 3    50   ~ 0
+LED_WWAN#
+$Comp
+L Device:R R?
+U 1 1 61CB9736
+P 1800 1900
+F 0 "R?" H 1730 1854 50  0000 R CNN
+F 1 "22" H 1730 1945 50  0000 R CNN
+F 2 "" V 1730 1900 50  0001 C CNN
+F 3 "~" H 1800 1900 50  0001 C CNN
+	1    1800 1900
+	-1   0    0    1   
+$EndComp
+Connection ~ 1800 2050
+Wire Wire Line
+	1800 1750 1800 1700
+$Comp
+L Device:R R?
+U 1 1 61CC8223
+P 2200 2025
+F 0 "R?" H 2130 1979 50  0000 R CNN
+F 1 "22" H 2130 2070 50  0000 R CNN
+F 2 "" V 2130 2025 50  0001 C CNN
+F 3 "~" H 2200 2025 50  0001 C CNN
+	1    2200 2025
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2200 1700 2200 1875
+Wire Wire Line
+	2200 2650 2200 2175
+Connection ~ 2200 2650
+$Comp
+L Device:R R?
+U 1 1 61CCB3C0
+P 1900 2100
+F 0 "R?" H 1830 2054 50  0000 R CNN
+F 1 "22" H 1830 2145 50  0000 R CNN
+F 2 "" V 1830 2100 50  0001 C CNN
+F 3 "~" H 1900 2100 50  0001 C CNN
+	1    1900 2100
+	-1   0    0    1   
+$EndComp
+Connection ~ 1900 2250
+Wire Wire Line
+	1900 1950 1900 1700
+$Comp
+L Logic_LevelTranslator:TXB0104ZXU U?
+U 1 1 61CD09F7
+P 1425 4550
+F 0 "U?" H 1425 3761 50  0000 C CNN
+F 1 "TXB0104ZXU" H 1425 3670 50  0000 C CNN
+F 2 "Package_BGA:Texas_MicroStar_Junior_BGA-12_2.0x2.5mm_Layout4x3_P0.5mm" H 1425 3800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/txb0104.pdf" H 1535 4645 50  0001 C CNN
+	1    1425 4550
+	1    0    0    -1  
+$EndComp
+Text Label 925  4250 2    50   ~ 0
+UART_RX
+Text Label 925  4450 2    50   ~ 0
+UART_TX
+Text Label 925  4650 2    50   ~ 0
+I2C_SCL
+Text Label 925  4850 2    50   ~ 0
+I2C_SDA
+Text Notes 3825 3350 2    50   ~ 0
+UART_CTS
+Text Notes 3825 3450 2    50   ~ 0
+UART_RTS
+NoConn ~ 3850 3350
+NoConn ~ 3850 3450
+Text Notes 3800 3050 2    50   ~ 0
+RI
+NoConn ~ 3850 3050
+Text Notes 3825 3750 2    50   ~ 0
+DTR
+NoConn ~ 3850 3750
+$Comp
+L power:+1V8 #PWR?
+U 1 1 61CF09F1
+P 700 3575
+F 0 "#PWR?" H 700 3425 50  0001 C CNN
+F 1 "+1V8" H 715 3748 50  0000 C CNN
+F 2 "" H 700 3575 50  0001 C CNN
+F 3 "" H 700 3575 50  0001 C CNN
+	1    700  3575
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 61CF14CF
+P 700 3775
+F 0 "C?" H 815 3821 50  0000 L CNN
+F 1 "100nF" H 815 3730 50  0000 L CNN
+F 2 "" H 738 3625 50  0001 C CNN
+F 3 "~" H 700 3775 50  0001 C CNN
+	1    700  3775
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61CF1C5F
+P 700 3925
+F 0 "#PWR?" H 700 3675 50  0001 C CNN
+F 1 "GND" H 705 3752 50  0000 C CNN
+F 2 "" H 700 3925 50  0001 C CNN
+F 3 "" H 700 3925 50  0001 C CNN
+	1    700  3925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	700  3625 700  3600
+Wire Wire Line
+	700  3600 1025 3600
+Connection ~ 700  3600
+Wire Wire Line
+	700  3600 700  3575
+Wire Wire Line
+	1025 3600 1325 3600
+Connection ~ 1025 3600
+Wire Wire Line
+	1325 3600 1325 3850
+Wire Wire Line
+	1025 3600 1025 4050
+$Comp
+L power:+3V3 #PWR?
+U 1 1 61D00660
+P 1525 3575
+F 0 "#PWR?" H 1525 3425 50  0001 C CNN
+F 1 "+3V3" H 1540 3748 50  0000 C CNN
+F 2 "" H 1525 3575 50  0001 C CNN
+F 3 "" H 1525 3575 50  0001 C CNN
+	1    1525 3575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1525 3575 1525 3725
+$Comp
+L Device:C C?
+U 1 1 61D02476
+P 1825 3725
+F 0 "C?" V 1573 3725 50  0000 C CNN
+F 1 "100nF" V 1664 3725 50  0000 C CNN
+F 2 "" H 1863 3575 50  0001 C CNN
+F 3 "~" H 1825 3725 50  0001 C CNN
+	1    1825 3725
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61D03135
+P 2025 3775
+F 0 "#PWR?" H 2025 3525 50  0001 C CNN
+F 1 "GND" H 2030 3602 50  0000 C CNN
+F 2 "" H 2025 3775 50  0001 C CNN
+F 3 "" H 2025 3775 50  0001 C CNN
+	1    2025 3775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2025 3775 2025 3725
+Wire Wire Line
+	2025 3725 1975 3725
+Wire Wire Line
+	1675 3725 1525 3725
+Connection ~ 1525 3725
+Wire Wire Line
+	1525 3725 1525 3850
+$Comp
+L power:GND #PWR?
+U 1 1 61D0642C
+P 1750 5350
+F 0 "#PWR?" H 1750 5100 50  0001 C CNN
+F 1 "GND" H 1755 5177 50  0000 C CNN
+F 2 "" H 1750 5350 50  0001 C CNN
+F 3 "" H 1750 5350 50  0001 C CNN
+	1    1750 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 5350 1750 5300
+Wire Wire Line
+	1750 5300 1425 5300
+Wire Wire Line
+	1425 5300 1425 5250
+Wire Wire Line
+	925  4250 1025 4250
+Wire Wire Line
+	925  4450 1025 4450
+Wire Wire Line
+	925  4650 1025 4650
+Wire Wire Line
+	925  4850 1025 4850
+Text HLabel 1875 4250 2    50   Output ~ 0
+SIM7600_UART_RX
+Text HLabel 1875 4450 2    50   Input ~ 0
+SIM7600_UART_TX
+Wire Wire Line
+	1875 4250 1825 4250
+Wire Wire Line
+	1875 4450 1825 4450
+Text HLabel 1875 4650 2    50   BiDi ~ 0
+SIM7600_I2C_SCL
+Text HLabel 1875 4850 2    50   BiDi ~ 0
+SIM7600_I2C_SDA
+Wire Wire Line
+	1875 4850 1825 4850
+Wire Wire Line
+	1875 4650 1825 4650
+Wire Notes Line
+	6550 1800 6550 475 
+$Comp
+L power:+3V3 #PWR?
+U 1 1 61D56840
+P 6225 725
+F 0 "#PWR?" H 6225 575 50  0001 C CNN
+F 1 "+3V3" H 6240 898 50  0000 C CNN
+F 2 "" H 6225 725 50  0001 C CNN
+F 3 "" H 6225 725 50  0001 C CNN
+	1    6225 725 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 61D56DB7
+P 6825 950
+F 0 "#PWR?" H 6825 800 50  0001 C CNN
+F 1 "+3V3" H 6840 1123 50  0000 C CNN
+F 2 "" H 6825 950 50  0001 C CNN
+F 3 "" H 6825 950 50  0001 C CNN
+	1    6825 950 
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	6550 475  475  475 
+Wire Notes Line
+	6550 1800 2825 1800
+$EndSCHEMATC

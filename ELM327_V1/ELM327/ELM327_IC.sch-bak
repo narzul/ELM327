@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 2
+Sheet 2 4
 Title ""
 Date ""
 Rev ""
@@ -395,109 +395,8 @@ F 3 "" H 10600 5025 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10600 5025 10475 5025
-$Comp
-L Regulator_Linear:L7805 U?
-U 1 1 61C04E2D
-P 10025 2700
-F 0 "U?" H 10025 2942 50  0000 C CNN
-F 1 "L7805" H 10025 2851 50  0000 C CNN
-F 2 "" H 10050 2550 50  0001 L CIN
-F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 10025 2650 50  0001 C CNN
-	1    10025 2700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10475 2850 10475 2700
-Wire Wire Line
-	10475 2700 10325 2700
-Wire Wire Line
-	9725 2700 9575 2700
-Wire Wire Line
-	9575 2700 9575 2850
-$Comp
-L Device:LED D?
-U 1 1 61C0E749
-P 10900 3000
-F 0 "D?" V 10939 2882 50  0000 R CNN
-F 1 "LED" V 10848 2882 50  0000 R CNN
-F 2 "" H 10900 3000 50  0001 C CNN
-F 3 "~" H 10900 3000 50  0001 C CNN
-	1    10900 3000
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	10900 2850 10900 2700
-Wire Wire Line
-	10900 2700 10475 2700
-Connection ~ 10475 2700
-$Comp
-L Device:R R?
-U 1 1 61C1452E
-P 10900 3425
-F 0 "R?" H 10970 3471 50  0000 L CNN
-F 1 "470" H 10970 3380 50  0000 L CNN
-F 2 "" V 10830 3425 50  0001 C CNN
-F 3 "~" H 10900 3425 50  0001 C CNN
-	1    10900 3425
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10900 3275 10900 3150
-Wire Wire Line
-	10900 3575 10900 3675
-Wire Wire Line
-	9575 3275 9575 3150
-Wire Wire Line
-	10475 3150 10475 3275
-$Comp
-L power:VBUS #PWR?
-U 1 1 61C18927
-P 8925 2600
-F 0 "#PWR?" H 8925 2450 50  0001 C CNN
-F 1 "VBUS" H 8940 2773 50  0000 C CNN
-F 2 "" H 8925 2600 50  0001 C CNN
-F 3 "" H 8925 2600 50  0001 C CNN
-	1    8925 2600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Simulation_SPICE:DIODE D?
-U 1 1 61C190C7
-P 9200 2700
-F 0 "D?" H 9200 2917 50  0000 C CNN
-F 1 "1N4001" H 9200 2826 50  0000 C CNN
-F 2 "" H 9200 2700 50  0001 C CNN
-F 3 "~" H 9200 2700 50  0001 C CNN
-F 4 "Y" H 9200 2700 50  0001 L CNN "Spice_Netlist_Enabled"
-F 5 "D" H 9200 2700 50  0001 L CNN "Spice_Primitive"
-	1    9200 2700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9350 2700 9575 2700
-Connection ~ 9575 2700
-Wire Wire Line
-	8925 2600 8925 2700
-Wire Wire Line
-	8925 2700 9050 2700
 Wire Notes Line
 	11225 3975 8600 3975
-Text Notes 9750 2425 0    50   ~ 0
-Battery to 5V
-$Comp
-L power:+5V #PWR?
-U 1 1 61C4FCCD
-P 10900 2600
-F 0 "#PWR?" H 10900 2450 50  0001 C CNN
-F 1 "+5V" H 10915 2773 50  0000 C CNN
-F 2 "" H 10900 2600 50  0001 C CNN
-F 3 "" H 10900 2600 50  0001 C CNN
-	1    10900 2600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10900 2600 10900 2700
-Connection ~ 10900 2700
 Wire Wire Line
 	9975 4625 9900 4625
 Wire Wire Line
@@ -509,8 +408,6 @@ Wire Wire Line
 Wire Wire Line
 	9900 4725 9975 4725
 Connection ~ 9900 4675
-Wire Wire Line
-	10025 3275 10025 3000
 Text Label 10600 4825 0    50   ~ 0
 CAN-L
 Text Label 9825 4825 2    50   ~ 0
@@ -535,19 +432,6 @@ Text Label 10600 4425 0    50   ~ 0
 J1850-Bus-
 Wire Wire Line
 	10600 4425 10475 4425
-$Comp
-L power:+12V #PWR?
-U 1 1 61C69717
-P 9575 2575
-F 0 "#PWR?" H 9575 2425 50  0001 C CNN
-F 1 "+12V" H 9590 2748 50  0000 C CNN
-F 2 "" H 9575 2575 50  0001 C CNN
-F 3 "" H 9575 2575 50  0001 C CNN
-	1    9575 2575
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9575 2575 9575 2700
 Text Notes 9975 4050 0    50   ~ 0
 OBD Connector
 Wire Notes Line
@@ -1343,11 +1227,7 @@ J1850-Bus-
 Text Label 3350 6075 2    50   ~ 0
 J1850-Bus+
 Wire Notes Line
-	2825 7775 2825 3900
-Wire Notes Line
 	2825 3900 6275 3900
-Wire Notes Line
-	6950 5425 6950 7775
 Text Notes 4075 4025 0    50   ~ 0
 J1850-Bus +/-
 Text Label 3550 1725 0    50   ~ 0
@@ -1376,50 +1256,6 @@ F 1 "GND" H 9330 1702 50  0000 C CNN
 F 2 "" H 9325 1875 50  0001 C CNN
 F 3 "" H 9325 1875 50  0001 C CNN
 	1    9325 1875
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 61C16A5C
-P 9575 3275
-F 0 "#PWR?" H 9575 3025 50  0001 C CNN
-F 1 "GND" H 9580 3102 50  0000 C CNN
-F 2 "" H 9575 3275 50  0001 C CNN
-F 3 "" H 9575 3275 50  0001 C CNN
-	1    9575 3275
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 61C583FD
-P 10025 3275
-F 0 "#PWR?" H 10025 3025 50  0001 C CNN
-F 1 "GND" H 10030 3102 50  0000 C CNN
-F 2 "" H 10025 3275 50  0001 C CNN
-F 3 "" H 10025 3275 50  0001 C CNN
-	1    10025 3275
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 61C16428
-P 10475 3275
-F 0 "#PWR?" H 10475 3025 50  0001 C CNN
-F 1 "GND" H 10480 3102 50  0000 C CNN
-F 2 "" H 10475 3275 50  0001 C CNN
-F 3 "" H 10475 3275 50  0001 C CNN
-	1    10475 3275
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 61C14961
-P 10900 3675
-F 0 "#PWR?" H 10900 3425 50  0001 C CNN
-F 1 "GND" H 10905 3502 50  0000 C CNN
-F 2 "" H 10900 3675 50  0001 C CNN
-F 3 "" H 10900 3675 50  0001 C CNN
-	1    10900 3675
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1748,152 +1584,6 @@ $EndComp
 Wire Wire Line
 	3050 1250 3050 1325
 Connection ~ 3050 1325
-$Comp
-L power:+12V #PWR?
-U 1 1 6205B79F
-P 850 6525
-F 0 "#PWR?" H 850 6375 50  0001 C CNN
-F 1 "+12V" H 865 6698 50  0000 C CNN
-F 2 "" H 850 6525 50  0001 C CNN
-F 3 "" H 850 6525 50  0001 C CNN
-	1    850  6525
-	1    0    0    -1  
-$EndComp
-$Comp
-L Regulator_Linear:LM317L_SOT-89 U?
-U 1 1 62061010
-P 1650 6525
-F 0 "U?" H 1650 6767 50  0000 C CNN
-F 1 "LM317L_SOT-89" H 1650 6676 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-89-3" H 1650 6775 50  0001 C CIN
-F 3 "http://www.ti.com/lit/ds/symlink/lm317l.pdf" H 1650 6525 50  0001 C CNN
-	1    1650 6525
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 62061D04
-P 1125 6825
-F 0 "R?" H 1195 6871 50  0000 L CNN
-F 1 "560" H 1195 6780 50  0000 L CNN
-F 2 "" V 1055 6825 50  0001 C CNN
-F 3 "~" H 1125 6825 50  0001 C CNN
-	1    1125 6825
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 620622C4
-P 2050 7200
-F 0 "R?" H 2120 7246 50  0000 L CNN
-F 1 "560" H 2120 7155 50  0000 L CNN
-F 2 "" V 1980 7200 50  0001 C CNN
-F 3 "~" H 2050 7200 50  0001 C CNN
-	1    2050 7200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 620624EE
-P 2050 6750
-F 0 "R?" H 2120 6796 50  0000 L CNN
-F 1 "330" H 2120 6705 50  0000 L CNN
-F 2 "" V 1980 6750 50  0001 C CNN
-F 3 "~" H 2050 6750 50  0001 C CNN
-	1    2050 6750
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR?
-U 1 1 62075B70
-P 2350 6525
-F 0 "#PWR?" H 2350 6375 50  0001 C CNN
-F 1 "+3.3V" H 2365 6698 50  0000 C CNN
-F 2 "" H 2350 6525 50  0001 C CNN
-F 3 "" H 2350 6525 50  0001 C CNN
-	1    2350 6525
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:LED D?
-U 1 1 620766B5
-P 1350 7350
-F 0 "D?" H 1343 7095 50  0000 C CNN
-F 1 "LED" H 1343 7186 50  0000 C CNN
-F 2 "" H 1350 7350 50  0001 C CNN
-F 3 "~" H 1350 7350 50  0001 C CNN
-	1    1350 7350
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	2050 7350 1500 7350
-Wire Wire Line
-	2050 7050 2050 6975
-Wire Wire Line
-	1650 6825 1650 6975
-Wire Wire Line
-	1650 6975 2050 6975
-Connection ~ 2050 6975
-Wire Wire Line
-	2050 6975 2050 6900
-Wire Wire Line
-	2050 6600 2050 6525
-Wire Wire Line
-	2050 6525 1950 6525
-Wire Wire Line
-	1350 6525 1125 6525
-Wire Wire Line
-	1125 6525 1125 6675
-Wire Wire Line
-	1125 6975 1125 7350
-Wire Wire Line
-	1125 7350 1200 7350
-Wire Wire Line
-	850  6525 1125 6525
-Connection ~ 1125 6525
-Connection ~ 2050 6525
-$Comp
-L power:GND #PWR?
-U 1 1 620E9146
-P 2050 7475
-F 0 "#PWR?" H 2050 7225 50  0001 C CNN
-F 1 "GND" H 2055 7302 50  0000 C CNN
-F 2 "" H 2050 7475 50  0001 C CNN
-F 3 "" H 2050 7475 50  0001 C CNN
-	1    2050 7475
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2050 7475 2050 7350
-Connection ~ 2050 7350
-$Comp
-L Device:C C?
-U 1 1 62119B28
-P 2350 7000
-F 0 "C?" H 2465 7046 50  0000 L CNN
-F 1 "1uF" H 2465 6955 50  0000 L CNN
-F 2 "" H 2388 6850 50  0001 C CNN
-F 3 "~" H 2350 7000 50  0001 C CNN
-	1    2350 7000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2350 6525 2350 6850
-Wire Wire Line
-	2050 6525 2350 6525
-Connection ~ 2350 6525
-Wire Wire Line
-	2050 7350 2350 7350
-Wire Wire Line
-	2350 7350 2350 7150
-Wire Notes Line
-	550  7775 550  6000
-Wire Notes Line
-	550  6000 2825 6000
-Wire Notes Line
-	550  7775 6950 7775
-Text Notes 1425 6150 0    50   ~ 0
-3.3V regulator
 Text HLabel 1900 1925 0    50   BiDi ~ 0
 ELM327_RX
 Text HLabel 1900 1725 0    50   BiDi ~ 0
@@ -1921,26 +1611,10 @@ F 3 "~" H 9175 5550 50  0001 C CNN
 	1    9175 5550
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:CP C?
-U 1 1 621EFCBF
-P 9575 3000
-F 0 "C?" H 9693 3046 50  0000 L CNN
-F 1 "0.1uF" H 9693 2955 50  0000 L CNN
-F 2 "" H 9613 2850 50  0001 C CNN
-F 3 "~" H 9575 3000 50  0001 C CNN
-	1    9575 3000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:CP C?
-U 1 1 621F399B
-P 10475 3000
-F 0 "C?" H 10593 3046 50  0000 L CNN
-F 1 "0.1uF" H 10593 2955 50  0000 L CNN
-F 2 "" H 10513 2850 50  0001 C CNN
-F 3 "~" H 10475 3000 50  0001 C CNN
-	1    10475 3000
-	1    0    0    -1  
-$EndComp
+Wire Notes Line
+	2825 7800 6950 7800
+Wire Notes Line
+	2825 3900 2825 7800
+Wire Notes Line
+	6950 5425 6950 7800
 $EndSCHEMATC
